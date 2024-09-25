@@ -59,6 +59,18 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
+
+#TODO: local Postgresql
+# local-postgresql:
+#   enabled: true
+#   postgresqlUsername: changeUser
+#   postgresqlPassword: changePassword
+#   postgresqlDatabase: changeDatabase
+#   postgresqlNonRootUsername: changeUser
+#   postgresqlNonRootPassword: changePassword
+#TODO: external Postgresql
+
+
 resources: 
   limits:
     cpu: 100m
