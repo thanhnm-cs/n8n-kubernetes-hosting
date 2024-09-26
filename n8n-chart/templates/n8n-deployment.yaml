@@ -4,7 +4,7 @@ metadata:
   labels:
     service: n8n
   name: n8n
-  namespace: n8n
+  namespace: {{ .Values.namespace }}
 spec:
   replicas: 1
   selector:
@@ -34,7 +34,7 @@ spec:
             - name: DB_TYPE
               value: postgresdb
             - name: DB_POSTGRESDB_HOST
-              value: postgres-service.n8n.svc.cluster.local
+              value: postgres-service.{{ .Values.namespace }}.svc.cluster.local
             - name: DB_POSTGRESDB_PORT
               value: "5432"
             - name: DB_POSTGRESDB_DATABASE
